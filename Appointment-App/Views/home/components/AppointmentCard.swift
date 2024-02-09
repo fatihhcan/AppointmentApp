@@ -11,6 +11,7 @@ struct AppointmentCard: View {
     let title: String
     let date: String
     let clock: String
+    let doctorName: String
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color.white)
@@ -29,13 +30,13 @@ struct AppointmentCard: View {
                         .fontWeight(.semibold)
                         .font(.system(size: FontSizes.subtitle1))
                     
-                    Text(date)
+                    Text("\(date) - \(clock)")
                         .font(.subheadline)
                         .foregroundColor(.silver)
                         .fontWeight(.semibold)
                         .font(.system(size: FontSizes.subtitle2))
                     
-                    Text(clock)
+                    Text(doctorName)
                         .font(.subheadline)
                         .foregroundColor(.royalBlue)
                         .fontWeight(.bold)
@@ -49,6 +50,6 @@ struct AppointmentCard: View {
 
 struct AppointmentCard_Previews: PreviewProvider {
     static var previews: some View {
-        AppointmentCard(title: "Dietitian", date: "25 October", clock: "03:00 PM")
+        AppointmentCard(title: "Dietitian", date: "25 October", clock: "03:00 PM", doctorName: "Dr.Agatha Wilson")
     }
 }

@@ -14,5 +14,8 @@ enum Images: String {
     case icPassword = "ic_password"
     case icProfile = "ic_profile"
     case imgDoctor = "img_doctor"
+    case icDietitian = "ic_dietitian"
+    case icPsychology = "ic_psychology"
+    case icTeeth = "ic_teeth"
 }
 

@@ -19,7 +19,7 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView(selection: $viewModel.selectedTab) {
-                    HomeView()
+                    HomeView(userId: viewModel.currentUserId)
                         .tabItem {
                             Label("", systemImage: "house")
                         }
